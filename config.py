@@ -1,5 +1,5 @@
 settings = {
-    'token': 'put your token',
+    'token': 'put your bot token',
     'bot_name': 'Шут',
-    'client_id': '957558452404777050',
+    'client_id': 'put your bot id',
     'prefix': '%'}
