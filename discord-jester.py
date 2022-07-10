@@ -9,7 +9,7 @@ import pprint as pp  # Красиво пишем
 import sympy as sp
 
 from config import settings  # Импорт настроек
-from phrases_and_words import words_hello  # слов для приветствия
+from phrases_and_words import words_hello  # Импорт слов для приветствия
 from jokes import list_jokes  # импорт шутОчек
 
 prefix = settings["prefix"]
@@ -185,13 +185,13 @@ bot_commands = {
 # Словарь с описанием команд
 bot_commands_info = {
     f'{prefix}Привет': 'Приветствие от бота',
-    f'{prefix}Команды': 'Список команды',
+    f'{prefix}Команды': 'Список команд',
     f'{prefix}Шутка': 'ШуТкА от бота',
     f'{prefix}Фраза': 'ФрАзА от бота',
     f'{prefix}Жак Фреско': 'МеМ с ЖаКоМ фРеСкОм',
     f'{prefix}Баян': 'Баян',
     f'{prefix}Калькулятор <выражение>': 'посчитает вам',
-    f'{prefix}Уравнение <выражение>': 'попробует решить уравнение',
+    f'{prefix}Уравнение <выражение>': 'попробует решить уравнение (но вряд ли у него получится)',
     f'{prefix}Упрощение <выражение>': 'попробует упростить',
     f'{prefix}Фонетический разбор': 'не работает'
 }
