@@ -1,13 +1,15 @@
+# Библиотеки:
 import os  # Зачем-то импорт os
 import discord  # импорт апи дискорда
 from discord.ext import commands  # импорт ещё одной штуки апи дискорда
-from random import choice, randrange  # Импорт рандом
+from random import choice, randrange  # Импорт рандома
 from datetime import datetime  # импорта датывремени
 import glob  # импорт для поиска фоток для Жака Фреско
 import json  # импорт жисон
-import pprint as pp  # Красиво пишем
-import sympy as sp
+import pprint as pp  # Красиво выводим
+import sympy as sp  # Чтобы считать
 
+# Сопутствующие файлы программы:
 from config import settings  # Импорт настроек
 from phrases_and_words import words_hello  # Импорт слов для приветствия
 from jokes import list_jokes  # импорт шутОчек
@@ -20,6 +22,7 @@ intents.members = True
 intents.presences = True
 client = discord.Client(intents=intents)
 
+# Очень мало комментариев, простите
 
 # функция генерации предложения
 def generate_message():
