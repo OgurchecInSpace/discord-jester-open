@@ -9,8 +9,7 @@ import pprint as pp  # Красиво пишем
 import sympy as sp
 
 from config import settings  # Импорт настроек
-from phrases_and_words import nouns, verbs, nouns2, \
-    words_hello  # импорт составных частей предложения и слов для приветствия
+from phrases_and_words import words_hello  # слов для приветствия
 from jokes import list_jokes  # импорт шутОчек
 
 prefix = settings["prefix"]
@@ -95,12 +94,6 @@ def joke(message):
     return message.channel.send(choice(list_jokes))
 
 
-def phrase(message):
-    words = f'{choice(nouns)}{["-" + choice(nouns), ""][randrange(0, 2)]} {choice(verbs)} {choice(nouns2)}'
-    create_logs('Фраза', message.author, message.channel.name, message.guild.name)
-    return message.channel.send(words)
-
-
 def fresko(message):
     image = choice(images)
     create_logs('Жак Фреско', message.author, message.channel.name, message.guild.name)
@@ -120,7 +113,7 @@ def accordion(message):
 
 def top_secret(message):  # Ошень секретно
     create_logs('top_secret', message.author, message.channel.name, message.guild.name)
-    return message.channel.send('Бандера и Власов кумиры пидарасов')
+    return message.channel.send('Ты думал, здесь что-то будет?')
 
 
 # Семейство калькуляторов
@@ -142,7 +135,7 @@ def calculate_classic(message, expression):  # Команда калькулят
 
 def calculate_equation(message, expression):  # Команда калькулятора уравнений (доделать)
     try:
-        return message.channel.send('не работает иди нахуй я заебался блять...')
+        return message.channel.send('не работает')
         for letter, good_letter in {'^': '**', ',': '.'}.items():
             expression = expression.replace(letter, good_letter)
         res = expression[expression.rfind('=') + 1:]
